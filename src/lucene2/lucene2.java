@@ -78,17 +78,9 @@ public class lucene2 {
 		System.out.println("Total Hits: " + docs.totalHits);
 		System.out.println("results: ");
 		
-		/*for (int i = 0; i < end; i++)
-		{
-			StoredFieldVisitor sfv = new DocumentStoredFieldVisitor() ;
-			sfv.			
-			Document d = indexSearcher.doc(i, hits) ;
-			//System.out.println("Content: " + d.get("Content"));
-		} */
 		for (ScoreDoc sd: hits) {
 			Document doc3 = indexSearcher.doc(sd.doc);
 			System.out.println("Content: " + doc3.get("fieldname"));
-			//results.add(prodcat.getProductById(doc.get("id")));
 		}
 		}
 		catch (IOException e) {
